@@ -4,8 +4,8 @@ function tryRemovingSuff(word,flag) {
   link = "https://od-api.oxforddictionaries.com:443/api/v1/inflections/en/" + word;
   remLemmaRqst.open("GET",link,true);
   remLemmaRqst.setRequestHeader("Accept", "application/json");
-  remLemmaRqst.setRequestHeader("app_id", "5db527e0");
-  remLemmaRqst.setRequestHeader("app_key", "35548092496f1f60f5e8d66e43837d15");
+  remLemmaRqst.setRequestHeader("app_id", INSERT_YOUR_OXFORD_DICTIONARY_API_ID_HERE);
+  remLemmaRqst.setRequestHeader("app_key", INSERT_YOUR_OXFORD_DICTIONARY_API_KEY_HERE);
   remLemmaRqst.send();
   function remLemma() {
     if(remLemmaRqst.readyState == 4){
@@ -26,8 +26,8 @@ function makeRequest(word,flag) {
   rqst.onreadystatechange = iChanged;
   rqst.open('GET',link,true);
   rqst.setRequestHeader("Accept", "application/json");
-  rqst.setRequestHeader("app_id", "5db527e0");
-  rqst.setRequestHeader("app_key", "35548092496f1f60f5e8d66e43837d15");
+  rqst.setRequestHeader("app_id", INSERT_YOUR_OXFORD_DICTIONARY_API_ID_HERE);
+  rqst.setRequestHeader("app_key", INSERT_YOUR_OXFORD_DICTIONARY_API_KEY_HERE);
   rqst.send();
   function iChanged() {
     if(rqst.readyState == 4){
